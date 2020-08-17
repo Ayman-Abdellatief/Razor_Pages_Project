@@ -7,5 +7,6 @@ namespace Razor_Pages_Project.Services
     public interface IEmployeeRepository
     {
     IEnumerable<Employee> GetAllEmployees ();
+        Employee GetEmployee(int Id);
     }
 }

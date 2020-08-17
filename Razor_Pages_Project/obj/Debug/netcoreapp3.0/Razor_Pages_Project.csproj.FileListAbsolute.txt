@@ -129,3 +129,4 @@ F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project\bin\Debug\netcoreapp3.0
 F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project\bin\Debug\netcoreapp3.0\Razor_Pages_Project.Services.dll
 F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project\bin\Debug\netcoreapp3.0\Razor_Pages_Project.Models.pdb
 F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project\bin\Debug\netcoreapp3.0\Razor_Pages_Project.Services.pdb
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project\obj\Debug\netcoreapp3.0\Razor\Pages\Employees\Details.cshtml.g.cs

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 using Razor_Pages_Project.Models;
 
 namespace Razor_Pages_Project.Services
@@ -27,5 +28,11 @@ namespace Razor_Pages_Project.Services
         {
             return _employeeList;
         }
+
+        public Employee GetEmployee(int Id)
+        {
+            return _employeeList.SingleOrDefault(e => e.Id == Id);
+           }
+
     }
 }
