@@ -1,0 +1,8 @@
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Models\bin\Debug\netstandard2.0\Razor_Pages_Project.Models.deps.json
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Models\bin\Debug\netstandard2.0\Razor_Pages_Project.Models.dll
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Models\bin\Debug\netstandard2.0\Razor_Pages_Project.Models.pdb
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Models\obj\Debug\netstandard2.0\Razor_Pages_Project.Models.csprojAssemblyReference.cache
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Models\obj\Debug\netstandard2.0\Razor_Pages_Project.Models.AssemblyInfoInputs.cache
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Models\obj\Debug\netstandard2.0\Razor_Pages_Project.Models.AssemblyInfo.cs
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Models\obj\Debug\netstandard2.0\Razor_Pages_Project.Models.dll
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Models\obj\Debug\netstandard2.0\Razor_Pages_Project.Models.pdb

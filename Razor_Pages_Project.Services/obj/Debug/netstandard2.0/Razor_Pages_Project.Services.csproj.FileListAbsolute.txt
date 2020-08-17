@@ -1,0 +1,11 @@
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\bin\Debug\netstandard2.0\Razor_Pages_Project.Services.deps.json
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\bin\Debug\netstandard2.0\Razor_Pages_Project.Services.dll
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\bin\Debug\netstandard2.0\Razor_Pages_Project.Services.pdb
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\bin\Debug\netstandard2.0\Razor_Pages_Project.Models.dll
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\bin\Debug\netstandard2.0\Razor_Pages_Project.Models.pdb
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\obj\Debug\netstandard2.0\Razor_Pages_Project.Services.csprojAssemblyReference.cache
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\obj\Debug\netstandard2.0\Razor_Pages_Project.Services.AssemblyInfoInputs.cache
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\obj\Debug\netstandard2.0\Razor_Pages_Project.Services.AssemblyInfo.cs
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\obj\Debug\netstandard2.0\Razor_Pages_Project.Services.csproj.CopyComplete
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\obj\Debug\netstandard2.0\Razor_Pages_Project.Services.dll
+F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project.Services\obj\Debug\netstandard2.0\Razor_Pages_Project.Services.pdb
