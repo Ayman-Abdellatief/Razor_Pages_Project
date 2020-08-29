@@ -13,6 +13,7 @@ namespace Razor_Pages_Project.Pages.Employees
     {
         private readonly IEmployeeRepository employeeRepository;
 
+
         public DetailsModel(IEmployeeRepository employeeRepository)
         {
             this.employeeRepository = employeeRepository;
@@ -20,9 +21,18 @@ namespace Razor_Pages_Project.Pages.Employees
 
         public Employee Employee { get; private set; }
 
-        public void OnGet( int ID)
+        [TempData]
+        public string Message { get; set; }
+        public IActionResult OnGet( int ID)
         {
+
             Employee = employeeRepository.GetEmployee(ID);
+            if(Employee == null)
+            {
+                return RedirectToPage("/NotFound");
+            }
+
+            return Page();
         }
     }
 }

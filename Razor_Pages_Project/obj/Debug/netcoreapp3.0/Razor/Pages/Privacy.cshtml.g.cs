@@ -19,8 +19,15 @@ using Razor_Pages_Project;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "F:\Projects\Core\Razor_Pages_Project\Razor_Pages_Project\Pages\_ViewImports.cshtml"
+using Razor_Pages_Project.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a0906750319c55d6ce48b545e707c28c2eb4094c", @"/Pages/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6cb0815b2e98e032bf85e27d000b5330bdb86863", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cf641aa289cef4550a11a54ec2012cc309304282", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Privacy : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #pragma warning disable 1998

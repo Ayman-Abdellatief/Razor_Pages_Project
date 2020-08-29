@@ -8,5 +8,9 @@ namespace Razor_Pages_Project.Services
     {
     IEnumerable<Employee> GetAllEmployees ();
         Employee GetEmployee(int Id);
+
+        Employee Update(Employee updatedEmployee);
+
+
     }
 }

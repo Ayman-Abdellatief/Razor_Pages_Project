@@ -34,5 +34,19 @@ namespace Razor_Pages_Project.Services
             return _employeeList.SingleOrDefault(e => e.Id == Id);
            }
 
+        public Employee Update(Employee updatedEmployee)
+        {
+            Employee employee = _employeeList.FirstOrDefault(e => e.Id == updatedEmployee.Id);
+
+            if(employee != null)
+            {
+                employee.Name = updatedEmployee.Name;
+                employee.Email = updatedEmployee.Email;
+                employee.Department = updatedEmployee.Department;
+                employee.PhotoPath = updatedEmployee.PhotoPath;
+            }
+
+            return employee;
+        }
     }
 }
