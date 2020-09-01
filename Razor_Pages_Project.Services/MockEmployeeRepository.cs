@@ -24,6 +24,39 @@ namespace Razor_Pages_Project.Services
                     Email = "david@pragimtech.com" },
             };
         }
+
+        public Employee Add(Employee newEmployee)
+        {
+            newEmployee.Id = _employeeList.Max(e => e.Id)+1;
+            _employeeList.Add(newEmployee);
+            return newEmployee;
+        }
+
+        public Employee Delete(int Id)
+        {
+            var EmployeeToDelete = _employeeList.FirstOrDefault(e => e.Id == Id);
+
+            if (EmployeeToDelete != null)
+            {
+                _employeeList.Remove(EmployeeToDelete);
+            }
+            return EmployeeToDelete;
+        }
+
+        public IEnumerable<DeptHeadCount> EmployeeCountByDepartment(Dept? dept)
+        {
+            IEnumerable<Employee> query = _employeeList;
+            if(dept.HasValue)
+            {
+                query =query.Where(e => e.Department == dept.Value);
+            }
+            return query.GroupBy(e => e.Department).Select(g => new DeptHeadCount()
+            {
+                Department = g.Key.Value,
+                Count = g.Count()
+            }).ToList();
+        }
+
         public IEnumerable<Employee> GetAllEmployees()
         {
             return _employeeList;
@@ -33,6 +66,15 @@ namespace Razor_Pages_Project.Services
         {
             return _employeeList.SingleOrDefault(e => e.Id == Id);
            }
+
+        public IEnumerable<Employee> Search(string searchTerm)
+        {
+            if(string.IsNullOrEmpty(searchTerm))
+            {
+                return _employeeList;
+            }
+            return _employeeList.Where(e => e.Name.Contains(searchTerm) || e.Email.Contains(searchTerm));
+        }
 
         public Employee Update(Employee updatedEmployee)
         {

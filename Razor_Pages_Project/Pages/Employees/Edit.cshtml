@@ -1,8 +1,9 @@
-﻿@page "{Id:min(1)}/{handler?}"
+﻿@page "{Id:min(1)?}/{handler?}"
 @model Razor_Pages_Project.Pages.Employees.EditModel
 @{
     ViewData["Title"] = "Edit";
     var photoPath = "~/images/" + (Model.Employee.PhotoPath ?? "Anonymous.jpg");
+    var PageHeader = Model.Employee.Id > 0 ? "Edit" : "Create";
 }
 
 
@@ -22,22 +23,28 @@
 </form>
 
 <hr />
-<h1>Edit</h1>
+<h1>@PageHeader</h1>
 <form method="post" class="m-3" enctype="multipart/form-data"   asp-page-handler="OnPost">
 
     <input hidden asp-for="Employee.Id" />
     <input hidden asp-for="Employee.PhotoPath" />
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
     <div class="form-group row">
         <label asp-for="Employee.Name" class="col-sm-2 col-form-label">
         </label>
         <div class="col-sm-10">
             <input asp-for="Employee.Name" class="form-control" placeholder="Name">
+            <span asp-validation-for="Employee.Name" class="text-danger"></span>
+            
         </div>
     </div>
     <div class="form-group row">
         <label asp-for="Employee.Email" class="col-sm-2 col-form-label"></label>
         <div class="col-sm-10">
             <input asp-for="Employee.Email" class="form-control" placeholder="Email">
+            <span asp-validation-for="Employee.Email" class="text-danger"></span>
         </div>
     </div>
 
@@ -48,6 +55,8 @@
                     asp-items="Html.GetEnumSelectList<Dept>()">
                 <option value="">Please Select</option>
             </select>
+            <span asp-validation-for="Employee.Department" class="text-danger"></span>
+
         </div>
     </div>
 
@@ -66,7 +75,7 @@
     </div>
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-primary">Save</button>
             <a asp-page="/Employees/Index" class="btn btn-primary">Cancel</a>
         </div>
     </div>
@@ -80,5 +89,7 @@
                 });
             });
         </script>
+
+    <partial name="_ValidationScriptsPartial"/>
     }
 </form>

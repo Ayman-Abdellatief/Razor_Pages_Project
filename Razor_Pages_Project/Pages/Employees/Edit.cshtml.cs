@@ -30,15 +30,22 @@ namespace Razor_Pages_Project.Pages.Employees
 
         public string Message { get; set; }
 
+        [BindProperty]
         public Employee Employee { get; set; }
 
         [BindProperty]
         public IFormFile Photo { get; set; }
 
-        public IActionResult OnGet(int id)
+        public IActionResult OnGet(int? id)
         {
-            Employee = employeeRepository.GetEmployee(id);
-
+            if(id.HasValue)
+            { 
+            Employee = employeeRepository.GetEmployee(id.Value);
+            }
+            else
+            {
+                Employee = new Employee();
+            }
             if (Employee == null)
             {
                 return RedirectToPage("/NotFound");
@@ -48,22 +55,32 @@ namespace Razor_Pages_Project.Pages.Employees
         }
 
 
-        public IActionResult OnPost(Employee employee )
+        public IActionResult OnPost()
         {
-
-            if (Photo != null)
+            if (ModelState.IsValid)
             {
-                if (employee.PhotoPath != null)
+                if (Photo != null)
                 {
-                    string filePath = Path.Combine(webHostEnvironment.WebRootPath,
-                        "images", employee.PhotoPath);
-                    System.IO.File.Delete(filePath);
+                    if (Employee.PhotoPath != null)
+                    {
+                        string filePath = Path.Combine(webHostEnvironment.WebRootPath,
+                            "images", Employee.PhotoPath);
+                        System.IO.File.Delete(filePath);
+                    }
+                    Employee.PhotoPath = ProcessUploadedFile();
                 }
-                employee.PhotoPath = ProcessUploadedFile();
+                if (Employee.Id > 0)
+                {
+                    Employee = employeeRepository.Update(Employee);
+                }
+                else
+                {
+                    Employee = employeeRepository.Add(Employee);
+                }
+                return RedirectToPage("Index");
             }
-            Employee =employeeRepository.Update(employee);
-            return RedirectToPage("Index"); 
 
+            return Page();
         }
 
         public IActionResult OnPostUpdateNotificationPreferences(int id)

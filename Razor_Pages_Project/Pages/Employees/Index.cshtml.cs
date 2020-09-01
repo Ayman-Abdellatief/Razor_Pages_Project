@@ -14,13 +14,16 @@ namespace Razor_Pages_Project.Pages.Employees
         private readonly IEmployeeRepository employeeRepository;
 
         public IEnumerable<Employee> Employees { get; set; }
+
+        [BindProperty(SupportsGet =true)]
+        public string SearchTerm { get; set; }
         public IndexModel(IEmployeeRepository employeeRepository)
         {
             this.employeeRepository = employeeRepository;
         }
         public void OnGet()
         {
-            Employees = employeeRepository.GetAllEmployees();
+            Employees = employeeRepository.Search(SearchTerm);
 
         }
     }
